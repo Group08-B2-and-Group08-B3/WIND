@@ -25,12 +25,14 @@ temp = df['temp']
 feels = df['feels_like'] 
 pres = df['pressure'] 
 hum = df['humidity']
+wspeed = df['wind_speed']
+wdeg = df['wind_deg']
 
 #converts dt(a unix timestamp format) into GMT+8
 dt = datetime.datetime.fromtimestamp(int(dt)).strftime('%Y-%m-%d %H:%M:%S')
 print(dt)
 
 #place data into a list
-weatherdata = [lat,lon,tz,dt,temp,feels,pres,hum]
+weatherdata = [lat,lon,tz,dt,temp,feels,pres,hum,wspeed,wdeg]
 #append list into dataset
 appendrow('weather.csv', weatherdata)
