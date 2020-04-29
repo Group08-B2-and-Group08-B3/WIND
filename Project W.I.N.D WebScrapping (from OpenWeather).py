@@ -1,6 +1,7 @@
 #import the necessary libs
-import pandas as pd
 import datetime
+import pandas as pd
+import requests
 from csv import writer
 
 #to append data to the next row of the existing dataset(.csv)
